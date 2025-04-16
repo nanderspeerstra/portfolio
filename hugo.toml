@@ -1,4 +1,20 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'hugo-profile'
+title = 'Nander Speerstra'
+theme = 'ananke'
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Who I Am"
+    url = "/who-i-am/"
+    weight = 2
+  [[menu.main]]
+    name = "What I Do"
+    url = "/what-i-do/"
+    weight = 3

@@ -11,3 +11,6 @@ hugo.linux
 
 # Temporary lock file while building
 /.hugo_build.lock
+
+# Themes files, that should be part of the repo
+/themes/
