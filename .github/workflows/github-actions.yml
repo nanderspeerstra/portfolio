@@ -36,8 +36,8 @@ jobs:
       - name: Run Flake8 Linter
         run: flake8 .
 
-  test-and-build:
-    name: Test and Build Hugo Website
+  validate-build:
+    name: Validate Hugo Build
     runs-on: ubuntu-latest
     needs: precommit-and-lint
     steps:
@@ -49,8 +49,24 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Run Hugo Tests
-        run: hugo --check --contentDir content
+      - name: Check for Broken Links
+        run: linkchecker public/
+
+      - name: Validate Markdown
+        run: markdownlint "**/*.md"
+
+  test-and-build:
+    name: Test and Build Hugo Website
+    runs-on: ubuntu-latest
+    needs: validate-build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
 
       - name: Build Hugo Website
         run: hugo --gc --minify
