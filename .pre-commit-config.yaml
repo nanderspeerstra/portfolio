@@ -28,3 +28,8 @@ repos:
     rev: 7.0.0
     hooks:
       - id: flake8
+
+  - repo: https://github.com/jackdewinter/pymarkdown
+    rev: main
+    hooks:
+        - id: pymarkdown

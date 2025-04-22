@@ -49,11 +49,13 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Check for Broken Links
-        run: linkchecker public/
+      - name: Install linkcheckmd
+        run: |
+          python -m pip install --upgrade pip
+          pip install linkcheckmd
 
-      - name: Validate Markdown
-        run: markdownlint "**/*.md"
+      - name: Check for Broken Links
+        run: python -m linkcheckmd content/
 
   test-and-build:
     name: Test and Build Hugo Website
