@@ -1,17 +1,17 @@
-# Use the official NGINX image as the base
-FROM nginx:alpine
+FROM node:lts AS base
+WORKDIR /app
 
-# Set the working directory inside the container
-WORKDIR /usr/share/nginx/html
+FROM base AS deps
+COPY package*.json ./
+RUN npm install
 
-# Remove the default NGINX HTML content
-RUN rm -rf ./*
+FROM base AS build
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npm run build
 
-# Copy the Hugo public directory (generated static files) to the container
-COPY public/ .
+FROM nginx:stable-alpine AS deploy
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
-# Expose port 80
-EXPOSE 80
-
-# Start NGINX
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 8080

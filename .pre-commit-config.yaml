@@ -33,3 +33,4 @@ repos:
     rev: main
     hooks:
         - id: pymarkdown
+          exclude: 'src/data/|README\.md|src/pages/'
