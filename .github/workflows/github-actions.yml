@@ -1,4 +1,4 @@
-name: Hugo Website CI
+name: Portfolio Website
 
 on:
   pull_request:
