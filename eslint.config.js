@@ -18,7 +18,7 @@ export default [
     },
   },
   {
-    files: ['**/*.astro'],
+    files: ['src/**/*.astro'],
     languageOptions: {
       parser: astroEslintParser,
       parserOptions: {
@@ -54,6 +54,6 @@ export default [
     },
   },
   {
-    ignores: ['dist', 'node_modules', '.github', 'types.generated.d.ts', '.astro'],
+    ignores: ['dist', 'node_modules', '.github', '.next', 'types.generated.d.ts', '.astro'],
   },
 ];

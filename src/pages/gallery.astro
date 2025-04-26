@@ -1,5 +1,4 @@
 ---
-import Features from '~/components/widgets/Features.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -11,7 +10,7 @@ const metadata = {
 const albums = await getCollection("albums");
 ---
 
-<Layout>
+<Layout metadata={metadata}>
   <div class="text-center">
     <h1 class="text-5xl font-bold">Photo Gallery</h1>
     <p class="text-xl my-4">A collection of my photos</p>
