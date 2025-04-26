@@ -46,6 +46,16 @@ const metadataDefinition = () =>
     })
     .optional();
 
+const albums = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      cover: image(),
+    })
+})
+
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
   schema: z.object({
@@ -67,4 +77,5 @@ const postCollection = defineCollection({
 
 export const collections = {
   post: postCollection,
+  albums: albums
 };

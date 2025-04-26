@@ -13,8 +13,8 @@ export const headerData = {
       href: '/professional',
     },
     {
-      text: 'Photography',
-      href: '/photography',
+      text: 'Photo Gallery',
+      href: '/gallery',
     },
     {
       text: 'Hobbies',
