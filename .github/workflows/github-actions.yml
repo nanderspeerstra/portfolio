@@ -107,8 +107,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          persist-credentials: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -126,11 +124,31 @@ jobs:
       - name: Generate CHANGELOG.md
         run: npm run release -- --skip.bump --skip.tag --skip.commit
 
-      - name: Commit Updated CHANGELOG.md
+      - name: Commit Changes to a Branch
         run: |
+          git checkout -b update-changelog
           git add CHANGELOG.md
           git commit -m "chore(release): update CHANGELOG.md"
-          git push
+
+      - name: Push Changes to New Branch
+        run: |
+          git push origin update-changelog
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: update-changelog
+          title: "Update CHANGELOG.md"
+          commit-message: "chore(release): update CHANGELOG.md"
+          base: main
+          body: "Automated update of the CHANGELOG.md file."
+          labels: changelog
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable Auto-Merge for Pull Request
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   docker-push:
     name: Push Docker Image to DockerHub
