@@ -107,8 +107,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          persist-credentials: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -122,6 +120,11 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Delete Old Branch
+        run: |
+          git push origin --delete update-changelog || true
+
 
       - name: Generate CHANGELOG.md
         run: npm run release -- --skip.bump --skip.tag --skip.commit
@@ -146,6 +149,7 @@ jobs:
           body: "Automated update of the CHANGELOG.md file."
           labels: changelog
           token: ${{ secrets.GITHUB_TOKEN }}
+          update-existing-pr: true
 
       - name: Enable Auto-Merge for Pull Request
         uses: peter-evans/enable-pull-request-automerge@v2
