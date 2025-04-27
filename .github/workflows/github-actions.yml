@@ -67,36 +67,36 @@ jobs:
           context: .
           push: false # Do not push during pull requests
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
-  
+
   docker-test:
-  name: Test Docker Container
-  runs-on: ubuntu-latest
-  needs: docker-build
-  steps:
-    - name: Run Docker Container in Detached Mode
-      run: |
-        docker run -d -p 8080:8080 --name astro-test ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
+    name: Test Docker Container
+    runs-on: ubuntu-latest
+    needs: docker-build
+    steps:
+      - name: Run Docker Container in Detached Mode
+        run: |
+          docker run -d -p 8080:8080 --name astro-test ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
 
-    - name: Test Home Page
-      run: |
-        sleep 5 # Wait for the container to initialize
-        curl -I http://localhost:8080 | grep "200 OK"
+      - name: Test Home Page
+        run: |
+          sleep 5 # Wait for the container to initialize
+          curl -I http://localhost:8080 | grep "200 OK"
 
-    - name: Test Personal Page
-      run: curl -I http://localhost:8080/personal | grep "200 OK"
+      - name: Test Personal Page
+        run: curl -I http://localhost:8080/personal | grep "200 OK"
 
-    - name: Test Professional Page
-      run: curl -I http://localhost:8080/professional | grep "200 OK"
+      - name: Test Professional Page
+        run: curl -I http://localhost:8080/professional | grep "200 OK"
 
-    - name: Test Gallery Page
-      run: curl -I http://localhost:8080/gallery | grep "200 OK"
+      - name: Test Gallery Page
+        run: curl -I http://localhost:8080/gallery | grep "200 OK"
 
-    - name: Test Hobbies Page
-      run: curl -I http://localhost:8080/hobbies | grep "200 OK"
+      - name: Test Hobbies Page
+        run: curl -I http://localhost:8080/hobbies | grep "200 OK"
 
-    - name: Stop and Remove Docker Container
-      run: docker stop astro-test && docker rm astro-test
-  
+      - name: Stop and Remove Docker Container
+        run: docker stop astro-test && docker rm astro-test
+
   docker-push:
     name: Push Docker Image to DockerHub
     runs-on: ubuntu-latest
