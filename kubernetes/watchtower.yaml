@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watchtower
+  namespace: portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watchtower
+  template:
+    metadata:
+      labels:
+        app: watchtower
+    spec:
+      containers:
+        - name: watchtower
+          image: containrrr/watchtower:latest
+          args:
+            - "--interval=60"          # Poll every 60 seconds
+            - "--cleanup"              # Remove old Docker images
+            - "--label-enable"         # Only monitor containers with the appropriate label
+          env:
+            - name: DOCKER_API_VERSION
+              value: "1.41"
+          volumeMounts:
+            - mountPath: /var/run/docker.sock
+              name: docker-socket
+      volumes:
+        - name: docker-socket
+          hostPath:
+            path: /var/run/docker.sock
