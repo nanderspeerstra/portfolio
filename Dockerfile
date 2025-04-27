@@ -1,11 +1,11 @@
 # Base image for Node.js
-FROM node:lts AS base
+FROM node:20 AS base
 WORKDIR /app
 
 # Dependencies installation stage
 FROM base AS deps
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # Build stage
 FROM base AS build
