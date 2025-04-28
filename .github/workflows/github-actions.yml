@@ -37,14 +37,19 @@ jobs:
         run: |
           git push origin --delete update-changelog || true
 
+      - name: Create branch update-changelog
+        run: git checkout -b update-changelog
+
       - name: Generate CHANGELOG.md
         run: npm run release -- --skip.bump --skip.tag --skip.commit
 
-      - name: Commit Changes to a Branch
+      - name: Commit CHANGELOG.md changes to a Branch
         run: |
-          git checkout -b update-changelog
           git add CHANGELOG.md
           git commit -m "chore(release): update CHANGELOG.md"
+
+      - name: Check git commit history
+        run: git log -n 2
 
       - name: Push Changes to New Branch
         run: |
