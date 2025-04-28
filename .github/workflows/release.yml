@@ -17,6 +17,5 @@ jobs:
       - name: Run Release Please
         uses: googleapis/release-please-action@v4
         with:
-          token: ${{ secrets.PRIVATE_ACCESS_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           release-type: node
-          package-name: portfolio
