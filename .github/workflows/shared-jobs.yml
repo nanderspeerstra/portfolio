@@ -26,7 +26,7 @@ jobs:
       - name: Run ESLint
         run: npx eslint
 
-  build-and-test:
+  npm-build:
     name: Build Astro Website
     runs-on: ubuntu-latest
     needs: precommit-and-lint
@@ -44,7 +44,3 @@ jobs:
 
       - name: Build Astro Website
         run: npm run build
-
-      # Uncomment if tests are applicable
-      # - name: Run Tests
-      #   run: npm run test
