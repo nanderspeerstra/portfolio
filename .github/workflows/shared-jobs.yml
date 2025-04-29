@@ -1,0 +1,50 @@
+name: Shared Jobs for Portfolio Website
+
+on:
+  workflow_call:
+    inputs:
+      node_version:
+        type: string
+        required: true
+
+jobs:
+  precommit-and-lint:
+    name: Pre-Commit and Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node_version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint
+
+  build-and-test:
+    name: Build Astro Website
+    runs-on: ubuntu-latest
+    needs: precommit-and-lint
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node_version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Astro Website
+        run: npm run build
+
+      # Uncomment if tests are applicable
+      # - name: Run Tests
+      #   run: npm run test
