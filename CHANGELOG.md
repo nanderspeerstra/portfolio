@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/nanderspeerstra/portfolio/compare/v1.1.0...v1.1.1) (2025-04-29)
+
+
+### Bug Fixes
+
+* Fixes issue with docker version tag ([bdabc9f](https://github.com/nanderspeerstra/portfolio/commit/bdabc9f8153b73a3ba717e5da70ca661df3d71c7))
+
 ## [1.1.0](https://github.com/nanderspeerstra/portfolio/compare/v1.0.0...v1.1.0) (2025-04-29)
 
 
