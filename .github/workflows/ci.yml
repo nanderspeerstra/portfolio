@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  precommit-and-lint-and-build:
+  precommit-and-lint-and-npm-build:
     uses: ./.github/workflows/shared-jobs.yml
     with:
       node_version: '20'

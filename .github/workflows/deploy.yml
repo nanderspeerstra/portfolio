@@ -6,7 +6,7 @@ on:
       - published
 
 jobs:
-  precommit-and-lint-and-build:
+  precommit-and-lint-and-npm-build:
     uses: ./.github/workflows/shared-jobs.yml
     with:
       node_version: '20'
@@ -14,7 +14,7 @@ jobs:
   docker-push:
     name: Deploy Docker Image to DockerHub
     runs-on: ubuntu-latest
-    needs: precommit-and-lint-and-build
+    needs: precommit-and-lint-and-npm-build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
