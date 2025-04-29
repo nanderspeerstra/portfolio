@@ -19,3 +19,4 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           release-type: node
+          skip-github-pull-request: true

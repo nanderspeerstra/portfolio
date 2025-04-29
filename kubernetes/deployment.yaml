@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: portfolio
-        image: nspeerstra/portfolio:1.0.0
+        image: nspeerstra/portfolio:v1.0.0
         ports:
         - containerPort: 80
