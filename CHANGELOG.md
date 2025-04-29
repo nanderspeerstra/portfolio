@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/nanderspeerstra/portfolio/compare/v1.0.0...v1.1.0) (2025-04-29)
+
+
+### Features
+
+* **cicd:** Finalizes github workflow ([88f7e0e](https://github.com/nanderspeerstra/portfolio/commit/88f7e0eea114b9ab411e57a5368a7f87a2d24fd8))
+
+
+### Bug Fixes
+
+* fixes something ([a12cbbe](https://github.com/nanderspeerstra/portfolio/commit/a12cbbe0e1aa2bf0d929bc5b737c6f331f90bef1))
+* without skipping pr ([54855cc](https://github.com/nanderspeerstra/portfolio/commit/54855ccb8fc0101e0ad26c0c484d3a7a511a4b14))
+
 ## 1.0.0 (2025-04-28)
 
 
