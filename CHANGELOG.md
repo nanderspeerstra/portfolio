@@ -10,6 +10,33 @@
 
 ### Bug Fixes
 
+* adds schema to manifest and config ([bbe08fe](https://github.com/nanderspeerstra/portfolio/commit/bbe08fed56ac3f76a2f3a07890fca75cf626cccb))
+* fixes manifest and config, i hope ([b5db30d](https://github.com/nanderspeerstra/portfolio/commit/b5db30d58fcd8181e6ed6a08528301521dca8093))
+* in config component set to . ([0768593](https://github.com/nanderspeerstra/portfolio/commit/0768593e87dc93faeb7dda08f3a0fd0e1dcba344))
+* include-v-in-tag set to true ([e08b09f](https://github.com/nanderspeerstra/portfolio/commit/e08b09ffadfa02714724bf045c540405c1754bfd))
+* invlude-v-in-tag back to false ([07e8032](https://github.com/nanderspeerstra/portfolio/commit/07e8032c3894fc6b96c38a46c699fb4b232044b4))
+* no labeler for release.yml ([1601b40](https://github.com/nanderspeerstra/portfolio/commit/1601b40c15c6390c4eb66b3d37b35ada65d92533))
+* path in manifest back to . ([8e59591](https://github.com/nanderspeerstra/portfolio/commit/8e59591db94638b2ee5ab194155a8a6c902052bf))
+* removed superfluous parameter in config.json ([a5e9d86](https://github.com/nanderspeerstra/portfolio/commit/a5e9d86ccbb73354edf21b7893c09543a4783990))
+* removes automerge step, adds release-please-config.json ([73cb5f3](https://github.com/nanderspeerstra/portfolio/commit/73cb5f3b2e91c84dcf450bc9c918935b808c1af9))
+* trying the other way around ([6917b15](https://github.com/nanderspeerstra/portfolio/commit/6917b158893304d2284864b0009a15836c75de4d))
+* updates release manifest with name and version ([85a0a3d](https://github.com/nanderspeerstra/portfolio/commit/85a0a3dc6ac47fc946709f503a1a4fc3b6e4e1d5))
+
+
+### Miscellaneous Chores
+
+* release 1.1.2 ([b38d540](https://github.com/nanderspeerstra/portfolio/commit/b38d5406d189a181a667d4711f3398af204edbef))
+
+## 1.1.2 (2025-04-30)
+
+
+### Features
+
+* First commit with website and CICD ([914055d](https://github.com/nanderspeerstra/portfolio/commit/914055d0443227cfc32afb45c6aa4e05542d99f0))
+
+
+### Bug Fixes
+
 * no labeler for release.yml ([1601b40](https://github.com/nanderspeerstra/portfolio/commit/1601b40c15c6390c4eb66b3d37b35ada65d92533))
 
 
