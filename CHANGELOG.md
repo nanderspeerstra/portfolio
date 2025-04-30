@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/nanderspeerstra/portfolio/compare/1.1.3...1.1.4) (2025-04-30)
+
+
+### Bug Fixes
+
+* automerge workflow now only triggers on label automerge ([8ecc458](https://github.com/nanderspeerstra/portfolio/commit/8ecc458c876a762d0b2113c061e8f9a6314928d9))
+
 ## [1.1.3](https://github.com/nanderspeerstra/portfolio/compare/v1.1.2...1.1.3) (2025-04-30)
 
 
