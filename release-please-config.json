@@ -1,8 +1,5 @@
 {
-  "labels": ["automerge"],
-  "target-branch": "main",
-  "release-type": "node",
-  "packages": {
-    ".": {}
+    "release-type": "node",
+    "target-branch": "main",
+    "labels": ["automerge"]
   }
-}
