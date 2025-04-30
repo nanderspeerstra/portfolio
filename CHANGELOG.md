@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.1.2 (2025-04-30)
+
+
+### Features
+
+* First commit with website and CICD ([914055d](https://github.com/nanderspeerstra/portfolio/commit/914055d0443227cfc32afb45c6aa4e05542d99f0))
+
+
+### Bug Fixes
+
+* no labeler for release.yml ([1601b40](https://github.com/nanderspeerstra/portfolio/commit/1601b40c15c6390c4eb66b3d37b35ada65d92533))
+
+
+### Miscellaneous Chores
+
+* release 1.1.2 ([b38d540](https://github.com/nanderspeerstra/portfolio/commit/b38d5406d189a181a667d4711f3398af204edbef))
+
 ## [1.1.1](https://github.com/nanderspeerstra/portfolio/compare/v1.1.0...v1.1.1) (2025-04-29)
 
 
