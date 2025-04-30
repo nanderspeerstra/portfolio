@@ -1,8 +1,0 @@
-{
-  "labels": ["automerge"],
-  "target-branch": "main",
-  "release-type": "node",
-  "packages": {
-    ".": {}
-  }
-}
