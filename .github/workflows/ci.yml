@@ -5,6 +5,7 @@ on:
 
 jobs:
   precommit-and-lint-and-npm-build:
+    if: "!startsWith(github.event.pull_request.title, 'chore(main)')"
     uses: ./.github/workflows/shared-jobs.yml
     with:
       node_version: '20'
