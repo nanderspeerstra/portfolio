@@ -2,8 +2,7 @@
   "release-type": "node",
   "packages": {
     ".": {
-      "component": "portfolio",
-      "release-type": "node",
+      "component": ".",
       "extra-label": "automerge"
     }
   },
