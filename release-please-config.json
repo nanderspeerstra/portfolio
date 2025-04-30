@@ -1,12 +1,12 @@
 {
   "release-type": "node",
-  "target-branch": "main",
-  "include-v-in-tag": true,
-  "changelog-types": [
-    {"type": "feat", "section": "Features"},
-    {"type": "fix", "section": "Bug Fixes"},
-    {"type": "chore", "section": "Maintenance"},
-    {"type": "docs", "section": "Documentation"},
-    {"type": "refactor", "section": "Refactor"}
-  ]
+  "packages": {
+    "portfolio": {
+      "component": "portfolio",
+      "release-type": "node",
+      "include-v-in-tag": false,
+      "extra-label": "automerge"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
