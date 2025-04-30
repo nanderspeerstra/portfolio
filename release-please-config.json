@@ -2,7 +2,7 @@
   "release-type": "node",
   "packages": {
     "portfolio": {
-      "component": "portfolio",
+      "component": ".",
       "release-type": "node",
       "include-v-in-tag": false,
       "extra-label": "automerge"
