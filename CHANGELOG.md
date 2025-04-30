@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.0 (2025-04-30)
+
+
+### Features
+
+* First commit with website and CICD ([914055d](https://github.com/nanderspeerstra/portfolio/commit/914055d0443227cfc32afb45c6aa4e05542d99f0))
+
+
+### Bug Fixes
+
+* adds automerge label step to release ([2000115](https://github.com/nanderspeerstra/portfolio/commit/2000115769dcae8f654a6023a98b52f53e407c40))
+* Adds labeller step for release.yml ([d0fce60](https://github.com/nanderspeerstra/portfolio/commit/d0fce60db97d688cda80d2c56c83817fce7ec070))
+* removes release-please config and manifest ([5eee63b](https://github.com/nanderspeerstra/portfolio/commit/5eee63b09dc464e5f4174ad97bc8b0763548ef02))
+
 ## [1.1.1](https://github.com/nanderspeerstra/portfolio/compare/v1.1.0...v1.1.1) (2025-04-29)
 
 
