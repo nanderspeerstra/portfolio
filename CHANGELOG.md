@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/nanderspeerstra/portfolio/compare/portfolio-v1.1.1...portfolio-v1.2.0) (2025-04-30)
+
+
+### Features
+
+* First commit with website and CICD ([914055d](https://github.com/nanderspeerstra/portfolio/commit/914055d0443227cfc32afb45c6aa4e05542d99f0))
+
 ## [1.1.1](https://github.com/nanderspeerstra/portfolio/compare/v1.1.0...v1.1.1) (2025-04-29)
 
 
