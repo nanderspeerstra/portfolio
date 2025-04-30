@@ -4,7 +4,6 @@
     ".": {
       "component": "portfolio",
       "release-type": "node",
-      "include-v-in-tag": false,
       "extra-label": "automerge"
     }
   },
