@@ -18,6 +18,15 @@ jobs:
         uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          target-branch: "main"
+          release-type: "node"
+
+      - name: Add automerge label to PR
+        uses: peter-evans/add-pr-labels@v2
+        with:
+          labels: automerge
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          pull-request-number: ${{ steps.release.outputs.pull-request-number }}
 
 
   automerge:
