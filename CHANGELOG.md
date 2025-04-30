@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/nanderspeerstra/portfolio/compare/1.1.4...1.2.0) (2025-04-30)
+
+
+### Features
+
+* aut-renew in kubernetes with cronjob ([eff7596](https://github.com/nanderspeerstra/portfolio/commit/eff759654fc6d1d775eed9a0be7ac044c6cf6f7f))
+
 ## [1.1.4](https://github.com/nanderspeerstra/portfolio/compare/1.1.3...1.1.4) (2025-04-30)
 
 
