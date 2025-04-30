@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: portfolio-restart
+  namespace: portfolio
+spec:
+  schedule: "*/1 * * * *" # Runs every minute
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: portfolio-restart
+            image: bitnami/kubectl:latest
+            command:
+            - /bin/sh
+            - -c
+            - kubectl rollout restart deployment portfolio -n portfolio
+          restartPolicy: Never
