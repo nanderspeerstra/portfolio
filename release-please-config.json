@@ -1,0 +1,12 @@
+{
+  "release-type": "node",
+  "target-branch": "main",
+  "include-v-in-tag": false,
+  "changelog-types": [
+    {"type": "feat", "section": "Features"},
+    {"type": "fix", "section": "Bug Fixes"},
+    {"type": "chore", "section": "Maintenance"},
+    {"type": "docs", "section": "Documentation"},
+    {"type": "refactor", "section": "Refactor"}
+  ]
+}
