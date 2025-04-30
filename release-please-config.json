@@ -1,7 +1,7 @@
 {
   "release-type": "node",
   "target-branch": "main",
-  "include-v-in-tag": false,
+  "include-v-in-tag": true,
   "changelog-types": [
     {"type": "feat", "section": "Features"},
     {"type": "fix", "section": "Bug Fixes"},
