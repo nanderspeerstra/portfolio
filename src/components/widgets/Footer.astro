@@ -1,7 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { SITE } from 'astrowind:config';
-import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -16,8 +14,6 @@ interface Links {
 }
 
 export interface Props {
-  links: Array<Links>;
-  secondaryLinks: Array<Link>;
   socialLinks: Array<Link>;
   footNote?: string;
   theme?: string;
