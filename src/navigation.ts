@@ -24,34 +24,9 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-    {
-      title: 'Professional',
-      links: [
-        { text: 'Features', href: '#' },
-      ],
-    },
-    {
-      title: 'Personal',
-      links: [
-        { text: 'Developer API', href: '#' },
-      ],
-    },
-    {
-      title: 'Hobbies',
-      links: [
-        { text: 'Docs', href: '#' },
-      ],
-    },
-    {
-      title: 'Models',
-      links: [
-        { text: 'About', href: '#' },
-      ],
-    },
-  ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/nanderspeerstra/' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/nanderspeerstra' },
+    { ariaLabel: 'Stack Overflow', icon: 'tabler:brand-stackoverflow', href: 'https://stackoverflow.com/users/5488275/nander-speerstra' },
   ],
 };
