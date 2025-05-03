@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/nanderspeerstra/portfolio/compare/1.3.0...1.4.0) (2025-05-03)
+
+
+### Features
+
+* adds photos in smaller format ([ea1ac77](https://github.com/nanderspeerstra/portfolio/commit/ea1ac77c34c6f1c24187c1abbd193b0488020ac7))
+* adds photos in smaller format ([ea1ac77](https://github.com/nanderspeerstra/portfolio/commit/ea1ac77c34c6f1c24187c1abbd193b0488020ac7))
+
 ## [1.3.0](https://github.com/nanderspeerstra/portfolio/compare/1.2.0...1.3.0) (2025-05-03)
 
 
