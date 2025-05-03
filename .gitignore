@@ -47,3 +47,6 @@ dist/
 
 # Local
 .secrets.yaml
+
+# Photo Gallery
+src/content/albums/**/*.jpg
