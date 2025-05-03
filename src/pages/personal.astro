@@ -5,44 +5,53 @@ import Layout from '~/layouts/PageLayout.astro';
 const metadata = {
   title: 'Personal',
 };
+
+import { Image } from 'astro:assets';
+import defaultImage from '~/assets/images/default.png';
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero Widget * -->
   <Features
-    title="About Me"
-    subtitle="A glimpse into my world."
-    columns={2}
+    title="A Glimpse into My World"
+    subtitle="Technology, creativity, and curiosity drive everything I do."
+    columns={3}
     items={[
       {
-        title: 'Introduction',
+        title: 'Personal Life',
         description:
-          "Hello! I'm a 32-year-old guy from Apeldoorn and Twello. My academic path started with a Bachelor's in General Linguistics at Radboud University Nijmegen (2010-2014), leading to a Master's in Communication and Information Sciences at Tilburg University (2014-2015). Now, I live in Ede with my girlfriend and our two adorable cats, Bilbo and Gilly.",
-      },
-      {
-        title: 'Hobbies',
-        description:
-          "Life is full of passions! I love making and listening to music, cycling, running, tinkering with bikes and motorbikes, collecting Donald Duck pockets, exploring Ruby and Jekyll, and indulging in photography. There's always something new to dive into!",
-      },
-      {
-        title: 'Academic Journey',
-        description:
-          "My academic focus has been on Linguistics and Data Science. It began at Radboud University, where I delved into General Linguistics, and culminated at Tilburg University, specializing in the human aspects of information technology.",
+          "Originally from Apeldoorn, I now call Ede home, where I live with my girlfriend and our two cats, Bilbo and Gilly. Whether diving into machine learning projects, exploring photography, or restoring a 1977 Classic Mini, I always seek new challenges.",
+        icon: 'tabler:home',
       },
       {
         title: 'Photography',
         description:
-          "Photography is one of my creative outlets—capturing moments that tell stories. Check out some of my work on the photography page!",
+          "Photography is my way of capturing the world from a unique perspective. Whether it's landscapes, architecture, or our cats, I like shots with a story behind it. You can explore my work on the Photography page.",
+        icon: 'tabler:camera',
       },
       {
-        title: 'Tinkering',
+        title: 'Tinkering & Engineering',
         description:
-          "From restoring our 1977 Classic Mini to fixing up bikes and motorbikes, tinkering is both my hobby and a way to disconnect from daily life.",
+          "I find joy in hands-on work, whether it's fixing motorbikes and our old Mini, fiddling with my 3D printer, or experimenting with electronics or computes.",
+        icon: 'tabler:tools',
       },
       {
-        title: 'Making Music',
+        title: 'Music & Sound Design',
         description:
-          "I enjoy playing the accordion and piano, exploring vinyl records, and indulging in HiRes audio. Music is my creative escape.",
+          "Music is both an escape and an inspiration. From playing the accordion and piano, to appreciating HiRes audio and vinyl records, I just can't be without.",
+        icon: 'tabler:music',
+      },
+      {
+        title: 'Learning & Experimentation',
+        description:
+          "From exploring new technologies like Astro (for this website) or frameworks like ACT (or learning how to build a power amp), to constantly expanding my horizons, I believe in the power of lifelong learning.",
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Exploring the Outdoors',
+        description:
+          "Hiking in nature, riding on beautiful roads, or camping in the wild. Whether on a bike ride or a road trip, I love being outdoors.",
+        icon: 'tabler:mountain',
       },
     ]}
   />
