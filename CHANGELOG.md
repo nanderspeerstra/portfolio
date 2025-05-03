@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.0](https://github.com/nanderspeerstra/portfolio/compare/1.2.0...1.3.0) (2025-05-03)
+
+
+### Features
+
+* Adds extra galleries and photos (not stored) ([716376a](https://github.com/nanderspeerstra/portfolio/commit/716376a297a2f72d393fbe68b09c272f8dcc0272))
+* removes jpg photos and albums folder from git repo ([6c8add2](https://github.com/nanderspeerstra/portfolio/commit/6c8add2dce0d3391629b0b6dd9949c28bfd2e6f8))
+* Updated personal, professional and hobbies page, and footer ([9fde18f](https://github.com/nanderspeerstra/portfolio/commit/9fde18fb98e4110c1c271dd55b3dcc92b6a859d1))
+
 ## [1.2.0](https://github.com/nanderspeerstra/portfolio/compare/1.1.4...1.2.0) (2025-04-30)
 
 
