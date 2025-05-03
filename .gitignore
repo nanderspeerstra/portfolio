@@ -44,3 +44,6 @@ coverage/
 
 # Builds
 dist/
+
+# Local
+.secrets.yaml

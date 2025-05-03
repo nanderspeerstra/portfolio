@@ -12,11 +12,10 @@ spec:
     metadata:
       labels:
         app: portfolio
-        com.centurylinklabs.watchtower.enable: "true"
     spec:
       containers:
       - name: portfolio
-        image: nspeerstra/portfolio:latest
+        image: nspeerstra/portfolio:1.2.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
