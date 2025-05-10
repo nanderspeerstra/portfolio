@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '~/layouts/PageLayout.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -12,23 +13,23 @@ const metadata = {
   <!-- Story Section -->
   <Content
     title="My Professional Journey"
-    subtitle="From linguistics to data science, here’s how my career evolved."
+    subtitle="From linguistics to machine learning, here’s how my career evolved."
     columns={1}
     items={[
       {
-        title: 'Academic Foundation',
-        description: "My journey began with a Bachelor's in **General Linguistics** at Radboud University Nijmegen (2010-2014), followed by a Master's in **Communication & Information Sciences** at Tilburg University (2014-2015). This interdisciplinary focus shaped my approach to technology, language processing, and AI-driven automation.",
+        title: 'Academic Foundation: General Linguistics and Machine Learning',
+        description: "My journey began with a Bachelor's in General Linguistics at Radboud University Nijmegen (2010-2014), followed by a Master's in Communication & Information Sciences at Tilburg University (2014-2015). This interdisciplinary focus shaped my approach to technology, language processing, and AI-driven automation.",
         },
       {
-        title: 'Early Career & Machine Learning',
-        description: "Since 2015, I’ve been working on **machine translation and speech-to-text applications**, blending software development with AI-driven solutions. My expertise spans Python, cloud computing, and automation, allowing me to optimize workflows and streamline processes.",
+        title: 'Early Career: Machine Translation',
+        description: "From 2015 to 2022, I’ve been worked on machine translation and speech-to-text applications, blending software development with AI-driven solutions.",
       },
       {
-        title: 'Leadership & Growth',
-        description: "Beyond technical work, I find fulfillment in **mentoring junior colleagues**, leading development teams, and fostering collaboration. Whether guiding projects or supporting my peers, I believe that knowledge-sharing and teamwork drive the best results.",
-      },
+        title: 'Change of Focus: Machine Learning and Python Development',
+        description: "Since 2022, I'm working on MLOps-related tasks (in AzureML), and generic Python development and DevOps tasks. My expertise spans Python, cloud computing, and automation, allowing me to optimize workflows and streamline processes.",
+      }
     ]}
-    image={{ src: "~/assets/images/default.png", alt: "My Professional Journey" }}
+    image={{ src: "~/assets/images/road.jpg", alt: "My Professional Journey" }}
   />
 
   <!-- Technical Expertise Section -->
@@ -62,5 +63,6 @@ const metadata = {
       { title: 'Effective Communication', description: "Beyond technical skills, I prioritize clear communication and interpersonal collaboration, ensuring smooth teamwork." },
       { title: 'Problem-Solving Mindset', description: "I approach challenges with a solution-driven focus, optimizing workflows and identifying improvements proactively." },
     ]}
+    image={{ src: "~/assets/images/nander-work.jpg", alt: "Me at work" }}
   />
 </Layout>
