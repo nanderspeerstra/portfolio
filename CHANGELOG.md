@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.0](https://github.com/nanderspeerstra/portfolio/compare/1.4.0...1.5.0) (2025-05-10)
+
+
+### Features
+
+* adds build version to website footer ([64f76df](https://github.com/nanderspeerstra/portfolio/commit/64f76dfeb2ef2cd49e837be2545ffcf7c85aac53))
+* adds images to professional, index, updates architecture text ([64f76df](https://github.com/nanderspeerstra/portfolio/commit/64f76dfeb2ef2cd49e837be2545ffcf7c85aac53))
+* adds images to professional, index, updates architecture text, adds build version to website footer ([64f76df](https://github.com/nanderspeerstra/portfolio/commit/64f76dfeb2ef2cd49e837be2545ffcf7c85aac53))
+
 ## [1.4.0](https://github.com/nanderspeerstra/portfolio/compare/1.3.0...1.4.0) (2025-05-03)
 
 
