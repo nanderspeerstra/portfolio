@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/nanderspeerstra/portfolio/compare/1.5.0...1.5.1) (2025-05-10)
+
+
+### Bug Fixes
+
+* fixes index image ([b588c74](https://github.com/nanderspeerstra/portfolio/commit/b588c74e6d35c68ae21ac92b16cf2fb082f4fe81))
+* fixes index image ([b588c74](https://github.com/nanderspeerstra/portfolio/commit/b588c74e6d35c68ae21ac92b16cf2fb082f4fe81))
+
 ## [1.5.0](https://github.com/nanderspeerstra/portfolio/compare/1.4.0...1.5.0) (2025-05-10)
 
 
