@@ -11,28 +11,16 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Explore My Work',
-        href: '#projects',
-        icon: 'tabler:code',
-      },
-      {
-        text: 'Connect with Me',
-        href: '#contact',
-        icon: 'tabler:message',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      <span class="text-blue-600 dark:text-blue-400">Innovating Through Code, Collaboration & Creativity</span>
-    </Fragment>
+  <div class="flex flex-col md:flex-row items-center justify-center py-12">
+    <Hero>
+      <Fragment slot="title">
+        <span class="text-blue-600 dark:text-blue-400">Welcome</span>
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      Hi, I'm <strong>Nander Speerstra</strong>, a <span class="text-blue-600 dark:text-blue-400">MLOps Engineer & Software Developer</span>
-      exploring software projects, machine learning projects and photography.
-    </Fragment>
-  </Hero>
+      <Fragment slot="subtitle">
+        Hi, I'm <strong>Nander Speerstra</strong>, a <span class="text-blue-600 dark:text-blue-400">MLOps Engineer & Software Developer</span>
+        exploring software projects, machine learning projects and photography.
+      </Fragment>
+    </Hero>
+    <img src="src/assets/images/nander.jpg" alt="Nander Speerstra" class="rounded-full shadow-md">
 </Layout>
