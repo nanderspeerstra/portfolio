@@ -1,12 +1,15 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
+import { Image } from 'astro:assets';
 import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import indexImage from '~/assets/images/nander.jpg';
 
 const metadata = {
   title: 'Nander\'s Portfolio',
   ignoreTitleTemplate: true,
 };
+
+
 ---
 
 <Layout metadata={metadata}>
@@ -22,5 +25,5 @@ const metadata = {
         exploring software projects, machine learning projects and photography.
       </Fragment>
     </Hero>
-    <img src="src/assets/images/nander.jpg" alt="Nander Speerstra" class="rounded-full shadow-md">
+    <Image src={indexImage} alt="Nander Speerstra" class="rounded-lg" />
 </Layout>
