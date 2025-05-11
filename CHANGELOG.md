@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/nanderspeerstra/portfolio/compare/1.5.1...1.6.0) (2025-05-11)
+
+
+### Features
+
+* Reworks ci and cd to not do double npm builds ([6b6dea2](https://github.com/nanderspeerstra/portfolio/commit/6b6dea25c494823ba29d416f5363afe66638b4c3))
+
 ## [1.5.1](https://github.com/nanderspeerstra/portfolio/compare/1.5.0...1.5.1) (2025-05-10)
 
 
