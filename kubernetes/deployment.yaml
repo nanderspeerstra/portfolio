@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: portfolio
-        image: nspeerstra/portfolio:1.2.0
+        image: nspeerstra/portfolio:1.6.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
