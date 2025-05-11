@@ -1,0 +1,45 @@
+name: npm-build
+
+on:
+  workflow_call:
+    inputs:
+      node_version:
+        type: string
+        required: true
+
+jobs:
+  npm-build:
+    name: npm build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node_version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Astro Website
+        run: npm run build
+
+      - name: Upload built files (dist)
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Upload NGINX config
+        uses: actions/upload-artifact@v4
+        with:
+          name: nginx-config
+          path: nginx/nginx.conf
+
+      - name: Upload Dockerfile
+        uses: actions/upload-artifact@v4
+        with:
+          name: dockerfile
+          path: Dockerfile
