@@ -9,3 +9,22 @@ jobs:
     uses: ./.github/workflows/shared-jobs.yml
     with:
       node_version: '20'
+
+  docker-build:
+    name: Build Astro Website
+    runs-on: ubuntu-latest
+    needs: precommit-and-lint
+    steps:
+      - name: Download built files
+        uses: actions/download-artifact@v4
+        with:
+          name: astro-build
+          path: dist/
+
+      - name: Push Docker Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest

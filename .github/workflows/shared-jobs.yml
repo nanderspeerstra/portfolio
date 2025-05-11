@@ -44,3 +44,9 @@ jobs:
 
       - name: Build Astro Website
         run: npm run build
+
+      - name: Upload built files
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-build
+          path: dist/
