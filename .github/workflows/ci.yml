@@ -30,6 +30,12 @@ jobs:
           name: dist
           path: .
 
+      - name: ls -la
+        run: ls -la
+
+      - name: ls -la ..
+        run: ls -la ..
+
       - name: Push Docker Image
         uses: docker/build-push-action@v6
         with:
