@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/nanderspeerstra/portfolio/compare/1.6.0...1.6.1) (2025-05-11)
+
+
+### Bug Fixes
+
+* cleans up repository and readme ([d0b1d2c](https://github.com/nanderspeerstra/portfolio/commit/d0b1d2cebd3cf109ca986de8338956738356486e))
+
 ## [1.6.0](https://github.com/nanderspeerstra/portfolio/compare/1.5.1...1.6.0) (2025-05-11)
 
 
