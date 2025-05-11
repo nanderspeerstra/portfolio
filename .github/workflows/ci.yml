@@ -4,16 +4,22 @@ on:
   pull_request:
 
 jobs:
-  precommit-and-lint-and-npm-build:
+  precommit-and-lint:
     if: "!startsWith(github.event.pull_request.title, 'chore(main)')"
-    uses: ./.github/workflows/shared-jobs.yml
+    uses: ./.github/workflows/_precommit-and-lint.yml
     with:
       node_version: '20'
+
+  npm-build:
+    uses: ./.github/workflows/_npm-build.yml
+    with:
+      node_version: '20'
+      needed_jobs: [precommit,lint]
 
   docker-build:
     name: docker build
     runs-on: ubuntu-latest
-    needs: precommit-and-lint-and-npm-build
+    needs: npm-build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -22,7 +28,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
-          path: dist/
+          path: .
 
       - name: Push Docker Image
         uses: docker/build-push-action@v6
