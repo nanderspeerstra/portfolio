@@ -26,8 +26,20 @@ jobs:
       - name: Build Astro Website
         run: npm run build
 
-      - name: Upload built files
+      - name: Upload built files (dist)
         uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: dist
+          path: dist/
+
+      - name: Upload NGINX config
+        uses: actions/upload-artifact@v4
+        with:
+          name: nginx-config
+          path: nginx/nginx.conf
+
+      - name: Upload Dockerfile
+        uses: actions/upload-artifact@v4
+        with:
+          name: dockerfile
+          path: Dockerfile
