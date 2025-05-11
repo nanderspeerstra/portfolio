@@ -68,5 +68,5 @@ jobs:
       - name: Upload built files
         uses: actions/upload-artifact@v4
         with:
-          name: astro-build
+          name: dist
           path: dist/
