@@ -8,8 +8,8 @@ on:
         required: true
 
 jobs:
-  precommit-and-lint:
-    name: Pre-Commit and Linting
+  precommit:
+    name: Run Pre-Commit Hooks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,13 +23,31 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run ESLint
+      - name: Run Pre-Commit Hooks
+        run: npx pre-commit run --all-files
+
+  lint:
+    name: Run Linters (ESLint)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node_version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Linters (ESLint)
         run: npx eslint
 
   npm-build:
-    name: Build Astro Website
+    name: npm build
     runs-on: ubuntu-latest
-    needs: precommit-and-lint
+    needs: [precommit,lint]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
