@@ -12,9 +12,9 @@ jobs:
 
   npm-build:
     uses: ./.github/workflows/_npm-build.yml
+    needs: precommit-and-lint
     with:
       node_version: '20'
-      needed_job: 'precommit-and-lint'
 
   docker-build:
     name: docker build
