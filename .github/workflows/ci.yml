@@ -28,6 +28,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
+          path: .
 
       - name: Push Docker Image
         uses: docker/build-push-action@v6
