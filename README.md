@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is the repository for my **personal portfolio website**, built using **Astro** and designed to showcase my work, projects, and skills.
+This is the repository for my **personal portfolio website**, built using **Astro** and designed to showcase my work, projects and skills.
 
 ## 🚀 Tech Stack
 - **Astro** – Static site builder
