@@ -20,6 +20,8 @@ jobs:
     name: docker build
     runs-on: ubuntu-latest
     needs: npm-build
+    permissions:
+      contents: read
     steps:
       - name: Download built files (dist)
         uses: actions/download-artifact@v4
