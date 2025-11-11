@@ -22,6 +22,8 @@ jobs:
     name: Deploy Docker Image to DockerHub
     runs-on: ubuntu-latest
     needs: npm-build
+    permissions:
+      contents: read
     steps:
       - name: Download built files (dist)
         uses: actions/download-artifact@v4
