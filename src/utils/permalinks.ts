@@ -38,17 +38,27 @@ export const getCanonical = (path = ''): string | URL => {
   return url;
 };
 
+/** Validate if a slug has a safe URL scheme */
+const isSafeExternalUrl = (slug: string): boolean => {
+  try {
+    const url = new URL(slug, 'http://example.com'); // base ensures relative URLs parse
+    const allowedProtocols = ['http:', 'https:', 'mailto:'];
+    return allowedProtocols.includes(url.protocol);
+  } catch {
+    // If it's not a valid URL, treat as unsafe external
+    return false;
+  }
+};
+
 /** */
 export const getPermalink = (slug = '', type = 'page'): string => {
   let permalink: string;
 
-  if (
-    slug.startsWith('https://') ||
-    slug.startsWith('http://') ||
-    slug.startsWith('://') ||
-    slug.startsWith('#') ||
-    slug.startsWith('javascript:')
-  ) {
+  if (slug.startsWith('#')) {
+    return slug;
+  }
+
+  if (isSafeExternalUrl(slug)) {
     return slug;
   }
 
