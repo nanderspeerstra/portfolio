@@ -48,3 +48,4 @@ dist/
 # Local
 .secrets.yaml
 cloudflare/
+hobby-ideas.txt
