@@ -11,6 +11,8 @@ jobs:
   precommit:
     name: Run Pre-Commit Hooks
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,6 +33,8 @@ jobs:
   lint:
     name: Run Linters (ESLint)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
